@@ -1,0 +1,56 @@
+/* Define the animation */
+
+body {
+  overflow: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes colorchange {
+    0%   {background-color: #0000FF;} /* Blue */
+    25%  {background-color: #00FFFF;} /* Aqua */
+    50%  {background-color: #000080;} /* Navy */
+    75%  {background-color: #ADD8E6;} /* LightBlue */
+    100% {background-color: #0000FF;} /* Blue */
+  }
+  
+/* Apply the animation to the header and footer */
+.header {
+  padding: 60px;
+  text-align: center;
+  animation-name: colorchange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+div.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#photoContainer img {
+  display: inline;
+  margin-bottom: 10px;
+}
+
+img {
+  transform: scale(0.5);
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
